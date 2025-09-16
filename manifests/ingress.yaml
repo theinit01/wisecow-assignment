@@ -9,7 +9,7 @@ spec:
     - match: Host(`wisecow.local`)
       kind: Rule
       services:
-        - name: wisecow-service
+        - name: wisecow-svc
           port: 80
   tls:
     secretName: wisecow-tls
