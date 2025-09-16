@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: wisecow
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`wisecow.local`)
+      kind: Rule
+      services:
+        - name: wisecow-service
+          port: 80
+  tls:
+    secretName: wisecow-tls
