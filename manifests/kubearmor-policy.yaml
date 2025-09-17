@@ -1,0 +1,18 @@
+apiVersion: security.kubearmor.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: only-allow-wisecow-exec
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: wisecow
+  process:
+    matchPaths:
+    - path: /bin/bash
+    - path: /usr/games/fortune
+    - path: /usr/games/cowsay
+    - path: /bin/nc
+    - path: /bin/cat
+    - path: /bin/sleep
+  action: Allow
