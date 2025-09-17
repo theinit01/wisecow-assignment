@@ -29,7 +29,7 @@ The application is deployed with the manifests in a KinD Cluster using ArgoCD
 ![wisecow](./images/wisecow.jpeg)
 
 A self-signed certificate was used to expose the application behind an ingress resource 
-![self cert](./images/https.jpeg)
+![self cert](./images/tls.jpeg)
 
 ## Problem Statement 2: Scripting Objectives
 ### Objective
