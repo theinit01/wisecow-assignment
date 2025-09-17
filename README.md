@@ -12,7 +12,7 @@ This repository contains the solution for the **Accuknox DevOps Trainee Practica
 The Wisecow application has been containerized and deployed on a Kubernetes environment with the following features:
 - **Dockerization**: A `Dockerfile` is provided to build the Wisecow application image.
 - **Kubernetes Deployment**: Kubernetes manifests are included for deploying the application.
-- **CI/CD Pipeline**: A GitHub Actions workflow automates the build, push, and deployment process.
+- **CI/CD Pipeline**: A GitHub Actions workflow automates the build and push process. It builds a new image with the git commit as a tag and pushes it to dockerhub.
 - **TLS Implementation**: The application is secured with TLS communication using Kubernetes Traefik Ingress.
 
 ### Artifacts
