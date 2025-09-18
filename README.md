@@ -70,5 +70,6 @@ kubectl exec -it wisecow-77c5bc6cfd-27wbz -- bash
 ```
 Any binary other than bash, nc, fortune, cowsay would be permission denied.
 fortune command is working, cat command is working, apt is blocked
+
 Screenshot:
 ![Kubearmor](./images/kubearmor.png)
