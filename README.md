@@ -57,10 +57,18 @@ The steps follwed were:
 ```bash
 kubectl annotate ns default kubearmor-file-posture=block --overwrite
 ```
-2. Lets try to execute some other processes:
+2. Apply the policy:
+```bash
+kubectl apply -f manifests/kubearmor-policy.yaml
+```
+
+3. Lets try to execute some other processes:
 
 ```bash
 kubectl exec -it wisecow-77c5bc6cfd-27wbz -- bash
 >$ curl google.com
 ```
 Any binary other than bash, nc, fortune, cowsay would be permission denied.
+fortune command is working, cat command is working, apt is blocked
+Screenshot:
+![Kubearmor](./images/kubearmor.png)
